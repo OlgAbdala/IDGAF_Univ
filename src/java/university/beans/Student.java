@@ -7,7 +7,7 @@ public class Student extends User {
 	private String className;
 	private String resumeLink;
 	
-	public Student(){};
+	public Student(){}
 	public Student(User u){
 		super(u);
 	}
@@ -45,4 +45,10 @@ public class Student extends User {
 	public boolean isStudent(){
 		return true;
 	}
+	@Override
+	public String toString() {
+		return super.toString()+"Student [studentID=" + studentID + ", course=" + course + ", year=" + year + ", className=" + className
+				+ ", resumeLink=" + resumeLink + "]";
+	}
+	
 }

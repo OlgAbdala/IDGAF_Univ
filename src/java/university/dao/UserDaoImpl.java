@@ -18,16 +18,16 @@ public class UserDaoImpl implements UserDao {
 	private String SQL_SELECT_STUDENT_FROM_USER_ID="SELECT * FROM Students WHERE userID=?";
 	private String SQL_SELECT_TUTOR_FROM_USER_ID="SELECT * FROM Tutors WHERE userID=?";
 	private String SQL_JOINT_SELECT_STUDENT_FROM_MAIL="SELECT U.ID, U.login, U.password, U.name, U.surname, U.mail, U.tel, "
-											+ "U.department, S.ID AS studentID, S.course, S.year, S.className, S.resumeLink"
-											+ "FROM Users AS U"
-											+ "INNER JOIN Students AS S"
-											+ "ON U.ID=S.userID"
+											+ "U.department, S.ID AS studentID, S.course, S.year, S.className, S.resumeLink "
+											+ "FROM Users AS U "
+											+ "INNER JOIN Students AS S "
+											+ "ON U.ID=S.userID "
 											+ "WHERE U.mail=?";
 	private String SQL_JOINT_SELECT_STUDENT_FROM_USER_ID="SELECT U.ID, U.login, U.password, U.name, U.surname, U.mail, U.tel, "
-			+ "U.department, S.ID AS studentID, S.course, S.year, S.className, S.resumeLink"
-			+ "FROM Users AS U"
-			+ "INNER JOIN Students AS S"
-			+ "ON U.ID=S.userID"
+			+ "U.department, S.ID AS studentID, S.course, S.year, S.className, S.resumeLink "
+			+ "FROM Users AS U "
+			+ "INNER JOIN Students AS S "
+			+ "ON U.ID=S.userID "
 			+ "WHERE U.ID=?";
 	
 	
@@ -148,7 +148,7 @@ public class UserDaoImpl implements UserDao {
 		student.setYear(resultSet.getInt("year"));
 		student.setClassName(resultSet.getString("className"));
 		student.setResumeLink(resultSet.getString("resumeLink"));
-		return null;
+		return student;
 	}
 	
 	private static Student mapStudent(User u, ResultSet resultSet) throws SQLException{

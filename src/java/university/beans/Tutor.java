@@ -18,4 +18,10 @@ public class Tutor extends User {
 	public boolean isStudent(){
 		return false;
 	}
+	@Override
+	public String toString() {
+		return super.toString()+"Tutor [tutorID=" + tutorID + "]";
+	}
+	
+	
 }
