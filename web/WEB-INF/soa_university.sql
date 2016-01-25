@@ -2,10 +2,10 @@
 -- version 4.4.10
 -- http://www.phpmyadmin.net
 --
--- Client :  localhost:8889
--- Généré le :  Dim 24 Janvier 2016 à 12:13
--- Version du serveur :  5.5.42
--- Version de PHP :  5.6.10
+-- Host: localhost:8889
+-- Generation Time: Jan 25, 2016 at 05:45 PM
+-- Server version: 5.5.42
+-- PHP Version: 5.6.10
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 SET time_zone = "+00:00";
@@ -17,13 +17,15 @@ SET time_zone = "+00:00";
 /*!40101 SET NAMES utf8mb4 */;
 
 --
--- Base de données :  `soa_university`
+-- Database: `soa_university`
 --
+CREATE DATABASE IF NOT EXISTS `soa_university` DEFAULT CHARACTER SET latin1 COLLATE latin1_swedish_ci;
+USE `soa_university`;
 
 -- --------------------------------------------------------
 
 --
--- Structure de la table `Students`
+-- Table structure for table `Students`
 --
 
 CREATE TABLE `Students` (
@@ -36,7 +38,7 @@ CREATE TABLE `Students` (
 ) ENGINE=InnoDB AUTO_INCREMENT=2 DEFAULT CHARSET=latin1;
 
 --
--- Contenu de la table `Students`
+-- Dumping data for table `Students`
 --
 
 INSERT INTO `Students` (`ID`, `userID`, `course`, `year`, `className`, `resumeLink`) VALUES
@@ -45,7 +47,7 @@ INSERT INTO `Students` (`ID`, `userID`, `course`, `year`, `className`, `resumeLi
 -- --------------------------------------------------------
 
 --
--- Structure de la table `Tutors`
+-- Table structure for table `Tutors`
 --
 
 CREATE TABLE `Tutors` (
@@ -56,7 +58,7 @@ CREATE TABLE `Tutors` (
 -- --------------------------------------------------------
 
 --
--- Structure de la table `Users`
+-- Table structure for table `Users`
 --
 
 CREATE TABLE `Users` (
@@ -71,50 +73,50 @@ CREATE TABLE `Users` (
 ) ENGINE=InnoDB AUTO_INCREMENT=2 DEFAULT CHARSET=latin1;
 
 --
--- Contenu de la table `Users`
+-- Dumping data for table `Users`
 --
 
 INSERT INTO `Users` (`ID`, `login`, `password`, `name`, `surname`, `mail`, `tel`, `department`) VALUES
 (1, 'user', 'user', 'testName', 'testSurname', 'mail', 'tel', 'dpt');
 
 --
--- Index pour les tables exportées
+-- Indexes for dumped tables
 --
 
 --
--- Index pour la table `Students`
+-- Indexes for table `Students`
 --
 ALTER TABLE `Students`
   ADD PRIMARY KEY (`ID`);
 
 --
--- Index pour la table `Tutors`
+-- Indexes for table `Tutors`
 --
 ALTER TABLE `Tutors`
   ADD PRIMARY KEY (`ID`);
 
 --
--- Index pour la table `Users`
+-- Indexes for table `Users`
 --
 ALTER TABLE `Users`
   ADD PRIMARY KEY (`ID`);
 
 --
--- AUTO_INCREMENT pour les tables exportées
+-- AUTO_INCREMENT for dumped tables
 --
 
 --
--- AUTO_INCREMENT pour la table `Students`
+-- AUTO_INCREMENT for table `Students`
 --
 ALTER TABLE `Students`
   MODIFY `ID` int(11) NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=2;
 --
--- AUTO_INCREMENT pour la table `Tutors`
+-- AUTO_INCREMENT for table `Tutors`
 --
 ALTER TABLE `Tutors`
   MODIFY `ID` int(11) NOT NULL AUTO_INCREMENT;
 --
--- AUTO_INCREMENT pour la table `Users`
+-- AUTO_INCREMENT for table `Users`
 --
 ALTER TABLE `Users`
   MODIFY `ID` int(11) NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=2;

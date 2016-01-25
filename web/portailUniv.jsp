@@ -45,9 +45,9 @@
 
                                          <fieldset>
                                                 <legend>Fill required values</legend>
-
+                                                <p class="alert-danger">${error}</p>
                                                 <label for="userName">Username <span>*</span></label>
-                                                <input type="text" id="v" name="userName" size="30" maxlength="30"/>
+                                                <input type="text" id="v" name="login" size="30" maxlength="30"/>
                                                 <%--<span>${form.erreurs['userName']}</span> --%>
                                                 <br />
 

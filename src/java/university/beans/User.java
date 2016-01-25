@@ -74,5 +74,8 @@ public class User {
 		return "User [ID=" + ID + ", login=" + login + ", password=" + password + ", name=" + name + ", surname="
 				+ surname + ", mail=" + mail + ", tel=" + tel + ", department=" + department + "]";
 	}
+        public boolean isStudent(){
+		return false;
+	}
 	
 }

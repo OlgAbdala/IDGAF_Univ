@@ -38,7 +38,7 @@
     </servlet>
 
     <servlet>
-        <servlet-name>connexionServlet</servlet-name>
+        <servlet-name>ConnexionServlet</servlet-name>
         <servlet-class>university.servlets.ConnexionServlet</servlet-class>
     </servlet>
 
@@ -90,8 +90,8 @@
     </servlet-mapping>
 
     <servlet-mapping>
-        <servlet-name>connexionServlet</servlet-name>
-        <url-pattern>/connexionServlet</url-pattern>
+        <servlet-name>ConnexionServlet</servlet-name>
+        <url-pattern>/ConnexionServlet</url-pattern>
     </servlet-mapping>
 
     <servlet-mapping>

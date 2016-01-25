@@ -13,6 +13,10 @@ public class PortailUnivServlet extends HttpServlet {
     @Override
         public void doGet( HttpServletRequest request, HttpServletResponse response ) throws ServletException, IOException {
 		this.getServletContext().getRequestDispatcher( VUE_FORM ).forward( request, response );
+                String error = request.getParameter("error");
+                if(error != null ){
+                    request.setAttribute("error","Infos login incorrectes" );
+                }
 	}
 
     @Override
